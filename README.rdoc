@@ -1,0 +1,1 @@
+Sample Rails application for accessing Magento REST API with OAuth.
