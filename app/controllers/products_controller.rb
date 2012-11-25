@@ -14,7 +14,9 @@ class ProductsController < ApplicationController
     end
 
     # We have our access token, so we can query the Magento API
-    render :text => session[:access_token].get('/api/rest/products').body
+    @products = JSON.parse(session[:access_token].get('/api/rest/products').body)
+    render :text => @products
+
   end
 
   # Oauth dance
